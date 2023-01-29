@@ -6,7 +6,7 @@ export default function MenuItem({ item }) {
 
   return (
     <div>
-     id: {id}<br/>name: {name},<br/>price: {price},<br/>short Description: {shortDescription}
+     id: {id}<br/>name: {name},<br/>price: {price.toFixed(2)},<br/>short Description: {shortDescription}
      <br/>
      <br/>
     </div>
