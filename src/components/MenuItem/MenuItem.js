@@ -6,10 +6,9 @@ export default function MenuItem({ item }) {
 
   return (
     <div>
-      {id},
-      {name},
-      {price},
-      {shortDescription}
+     id: {id}<br/>name: {name},<br/>price: {price},<br/>short Description: {shortDescription}
+     <br/>
+     <br/>
     </div>
   );
 }
