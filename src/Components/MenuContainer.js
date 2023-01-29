@@ -5,7 +5,7 @@ import ItemCard from './Menu/ItemCard';
  const API = 'https://px32id5fdg.execute-api.us-east-1.amazonaws.com/data'
 
 function MenuContainer() {
-    const [menu, setMenu] = useState([]);
+    const [ menu, setMenu ] = useState([]);
     const [ searchInput, setSearchInput ] = useState('');
 
     
@@ -21,11 +21,11 @@ function MenuContainer() {
         setSearchInput(e.target.value)
     }
 
-    if(menu){
-        filteredItems = menu.filter(item => {
-            const { name } = item;
-            name.toLowerCase().includes(searchInput.toLowerCase())})
-    }
+    // if(menu){
+    //     filteredItems = menu.filter(item => {
+    //         const { name } = item;
+    //         name.toLowerCase().includes(searchInput.toLowerCase())})
+    // }
 
   return (
     <div>
