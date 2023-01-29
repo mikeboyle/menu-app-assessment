@@ -4,10 +4,10 @@ function ItemCard({item}) {
   return (
     <div>
         <ul>
-            <li>id:</li>
-            <li>name:</li>
-            <li>price:</li>
-            <li>Short Description:</li>
+            <li>id: {item.id}</li>
+            <li>name: {item.name}</li>
+            <li>price: ${item.price}</li>
+            <li>{item.shortDescription}</li>
         </ul>
     </div>
   )

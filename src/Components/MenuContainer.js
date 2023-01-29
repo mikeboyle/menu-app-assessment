@@ -6,16 +6,37 @@ import ItemCard from './Menu/ItemCard';
 
 function MenuContainer() {
     const [menu, setMenu] = useState([]);
+    const [ searchInput, setSearchInput ] = useState('');
 
+    
     useEffect(() => {
         axios.get(API)
         .then((res) => setMenu(res.data))
         .catch(err => console.log(err))
     }, [])
+    
+    let filteredItems = menu;
+
+    const handleChange = (e) => {
+        setSearchInput(e.target.value)
+    }
+
+    if(menu){
+        filteredItems = menu.filter(item => {
+            const { name } = item;
+            name.toLowerCase().includes(searchInput.toLowerCase())})
+    }
 
   return (
     <div>
-        {menu.map(item => <ItemCard item={item} id={item.id}/>)}
+        <h1>Our Menu</h1>
+        <input 
+        type='text'
+        placeholder='search'
+        value={searchInput}
+        onChange={handleChange}
+    />
+        {filteredItems.map(item => <ItemCard item={item} key={item.id}/>)}
     </div>
   )
 }
