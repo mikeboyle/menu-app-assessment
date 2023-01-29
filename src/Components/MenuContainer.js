@@ -28,7 +28,7 @@ function MenuContainer() {
     // }
 
   return (
-    <div>
+<div>
         <h1>Our Menu</h1>
         <input 
         type='text'
