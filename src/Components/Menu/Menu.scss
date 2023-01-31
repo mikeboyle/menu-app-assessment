@@ -1,0 +1,11 @@
+.menuSection {
+  width: 95vw;
+  height: inherit;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+
+  .itemsCard {
+    border: 1px solid black;
+  }
+}

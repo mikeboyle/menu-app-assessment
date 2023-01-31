@@ -1,0 +1,10 @@
+.mainSection {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  .searchbarContainer--sticky {
+    position: sticky;
+    top: 0;
+  }
+}
