@@ -6,7 +6,7 @@ function ItemCard({item}) {
         <ul>
             <li>id: {item.id}</li>
             <li>name: {item.name}</li>
-            <li>price: ${item.price}</li>
+            <li>price: ${item.price.toFixed(2)}</li>
             <li>{item.shortDescription}</li>
         </ul>
     </div>
